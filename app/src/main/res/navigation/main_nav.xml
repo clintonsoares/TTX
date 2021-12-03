@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_nav"
+    app:startDestination="@id/homeScreen">
+
+    <fragment
+        android:id="@+id/homeScreen"
+        android:name="com.clintonsoares.ttx.ui.HomeFragment"
+        android:label="Home Fragment">
+        <action
+            android:id="@+id/action_signInFragment_to_filterScreen"
+            app:destination="@id/listScreen"
+            app:popUpTo="@+id/main_nav"
+            app:popUpToInclusive="true"
+            />
+    </fragment>
+
+    <fragment
+        android:id="@+id/listScreen"
+        android:name="com.clintonsoares.ttx.ui.HomeFragment"
+        android:label="Home Fragment">
+        <action
+            android:id="@+id/action_signInFragment_to_filterScreen"
+            app:destination="@id/homeScreen"
+            app:popUpTo="@+id/main_nav"
+            app:popUpToInclusive="true"
+            />
+    </fragment>
+
+</navigation>
